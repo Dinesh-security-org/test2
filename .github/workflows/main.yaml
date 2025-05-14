@@ -1,0 +1,12 @@
+name: 'Testing'
+
+on:
+  push:
+    branches:
+      - '**'
+  pull_request:
+    types: [opened, synchronize, reopened] 
+jobs:
+  call-workflow-passing-data:
+    uses: Dinesh-security-org/Port/.github/workflows/Check-repo-quality.yaml@main
+    secrets: inherit
